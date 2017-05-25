@@ -19,7 +19,7 @@ Lightweight piker controller that allows to pick different media types from diff
   s.source           = { :git => 'https://github.com/anatoliyv/lightweight-picker-controller.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/anatoliy_v'
   s.ios.deployment_target = '9.0'
-  s.source_files     = 'PreviewController/Classes/**/*'
-  s.resources        = 'PreviewController/Assets/**/*'
+  s.source_files     = 'LightweightPickerController/Classes/**/*'
+  # s.resources        = 'LightweightPickerController/Assets/**/*'
   s.frameworks       = 'UIKit', 'AssetsLibrary', 'Photos', 'MobileCoreServices'
 end
