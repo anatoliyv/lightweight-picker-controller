@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LightweightPickerController_Example' do
+  pod 'LightweightPickerController', :path => '../'
+
+  target 'LightweightPickerController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

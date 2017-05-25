@@ -1,0 +1,6 @@
+framework module LightweightPickerController {
+  umbrella header "LightweightPickerController-umbrella.h"
+
+  export *
+  module * { export * }
+}

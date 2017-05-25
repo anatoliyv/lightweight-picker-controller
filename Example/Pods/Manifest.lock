@@ -1,0 +1,16 @@
+PODS:
+  - LightweightPickerController (0.1.0)
+
+DEPENDENCIES:
+  - LightweightPickerController (from `../`)
+
+EXTERNAL SOURCES:
+  LightweightPickerController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LightweightPickerController: f8dabb966c3591ab8d55a166ef1532282dbd38c8
+
+PODFILE CHECKSUM: 786dcb82afad5d5208d0b5bdec5448e0185d7f4f
+
+COCOAPODS: 1.2.0

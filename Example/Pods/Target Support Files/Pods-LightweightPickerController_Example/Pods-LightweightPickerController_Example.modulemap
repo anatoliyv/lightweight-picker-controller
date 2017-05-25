@@ -1,0 +1,6 @@
+framework module Pods_LightweightPickerController_Example {
+  umbrella header "Pods-LightweightPickerController_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
