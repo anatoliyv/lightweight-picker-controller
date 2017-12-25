@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LightweightPickerController'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Controller to pick and crop media. Writte in Swift.'
   s.description      = <<-DESC
 Lightweight piker controller that allows to pick different media types from different sources and crop images.
@@ -18,8 +18,8 @@ Lightweight piker controller that allows to pick different media types from diff
   s.author           = { 'Anatoliy Voropay' => 'anatoliy.voropay@gmail.com' }
   s.source           = { :git => 'https://github.com/anatoliyv/lightweight-picker-controller.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/anatoliy_v'
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   s.source_files     = 'LightweightPickerController/Classes/**/*'
-  # s.resources        = 'LightweightPickerController/Assets/**/*'
+  # s.resources      = 'LightweightPickerController/Assets/**/*'
   s.frameworks       = 'UIKit', 'AssetsLibrary', 'Photos', 'MobileCoreServices'
 end

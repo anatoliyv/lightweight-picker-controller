@@ -145,7 +145,7 @@ public class LightweightPickerController: UIViewController {
     
     private func showMediaPickerControllerWithType(_ type: UIImagePickerControllerSourceType) {
         if  ((type == .photoLibrary || type == .savedPhotosAlbum) && PHPhotoLibrary.authorizationStatus() == .denied) ||
-            (type == .camera && (AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) == .denied || AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeAudio) == .denied))
+            (type == .camera && (AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == .denied || AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .denied))
         {
             showNoAccessAlert()
             return
@@ -155,12 +155,12 @@ public class LightweightPickerController: UIViewController {
             PHPhotoLibrary.requestAuthorization() { _ in
                 self.showMediaPickerControllerWithType(type)
             }
-        } else if type == .camera && AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) == .notDetermined {
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { _ in
+        } else if type == .camera && AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == .notDetermined {
+            AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { _ in
                 self.showMediaPickerControllerWithType(type)
             })
-        } else if type == .camera && AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeAudio) == .notDetermined {
-            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeAudio, completionHandler: { _ in
+        } else if type == .camera && AVCaptureDevice.authorizationStatus(for: AVMediaType.audio) == .notDetermined {
+            AVCaptureDevice.requestAccess(for: AVMediaType.audio, completionHandler: { _ in
                 self.showMediaPickerControllerWithType(type)
             })
         } else {
@@ -278,8 +278,8 @@ extension LightweightPickerController: LightweightImageEditorControllerDelegate 
     }
     
     public func lightweightImageEditorController(_ controller: LightweightImageEditorController, didEndEditingImage image: UIImage) {
-        controller.dismiss(animated: true, completion: { _ in
-            self.imagePickerController?.dismiss(animated: true, completion: { _ in
+        controller.dismiss(animated: true, completion: {
+            self.imagePickerController?.dismiss(animated: true, completion: {
                 self.delegate?.lightweightPickerController?(self, didSelectImage: image)
             })
         })

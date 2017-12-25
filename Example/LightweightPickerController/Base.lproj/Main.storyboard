@@ -1,59 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b0Y-x3-fDl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="a5K-1C-7aX">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LightweightPickerController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b0Y-x3-fDl" customClass="ViewController" customModule="LightweightPickerController_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="TIq-nb-dVW"/>
+                        <viewControllerLayoutGuide type="bottom" id="gxj-ud-f9d"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="aqB-7P-vss">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uO7-qM-f6D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-ae-6m8">
                                 <rect key="frame" x="16" y="20" width="343" height="573"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP9-Xq-4RK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrR-QM-OkF">
                                 <rect key="frame" x="16" y="601" width="343" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Ra4-wm-W1S"/>
+                                    <constraint firstAttribute="height" constant="46" id="MIZ-5M-2GB"/>
                                 </constraints>
-                                <state key="normal" title="Select image"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="pressedButtonWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yQl-Ev-77g"/>
+                                    <action selector="pressedButtonWithSender:" destination="b0Y-x3-fDl" eventType="touchUpInside" id="U5q-ZR-Cjb"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NP9-Xq-4RK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="4Au-cB-kF6"/>
-                            <constraint firstItem="NP9-Xq-4RK" firstAttribute="top" secondItem="uO7-qM-f6D" secondAttribute="bottom" constant="8" id="EjR-OL-Mhd"/>
-                            <constraint firstAttribute="trailing" secondItem="uO7-qM-f6D" secondAttribute="trailing" constant="16" id="RtM-ol-Ssf"/>
-                            <constraint firstItem="uO7-qM-f6D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="fpE-zN-UJs"/>
-                            <constraint firstItem="uO7-qM-f6D" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="qBl-Xr-mU1"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="NP9-Xq-4RK" secondAttribute="bottom" constant="20" id="tsE-tR-YBn"/>
-                            <constraint firstAttribute="trailing" secondItem="NP9-Xq-4RK" secondAttribute="trailing" constant="16" id="xG1-9P-sQc"/>
+                            <constraint firstItem="FrR-QM-OkF" firstAttribute="top" secondItem="XoC-ae-6m8" secondAttribute="bottom" constant="8" id="12n-Z2-3J2"/>
+                            <constraint firstItem="gxj-ud-f9d" firstAttribute="top" secondItem="FrR-QM-OkF" secondAttribute="bottom" constant="20" id="Fqe-47-xcJ"/>
+                            <constraint firstItem="XoC-ae-6m8" firstAttribute="trailing" secondItem="aqB-7P-vss" secondAttribute="trailingMargin" id="GyE-Nx-IaS"/>
+                            <constraint firstItem="XoC-ae-6m8" firstAttribute="top" secondItem="TIq-nb-dVW" secondAttribute="bottom" id="Iik-zS-8p6"/>
+                            <constraint firstItem="FrR-QM-OkF" firstAttribute="leading" secondItem="aqB-7P-vss" secondAttribute="leadingMargin" id="Nbj-xb-dbH"/>
+                            <constraint firstItem="XoC-ae-6m8" firstAttribute="leading" secondItem="aqB-7P-vss" secondAttribute="leadingMargin" id="Qqm-Pi-Hlb"/>
+                            <constraint firstItem="FrR-QM-OkF" firstAttribute="trailing" secondItem="aqB-7P-vss" secondAttribute="trailingMargin" id="RfP-Sg-dw9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="uO7-qM-f6D" id="wYA-jn-Efq"/>
-                        <outlet property="pickButton" destination="NP9-Xq-4RK" id="KVf-EH-gbg"/>
+                        <outlet property="imageView" destination="XoC-ae-6m8" id="slw-1v-A6v"/>
+                        <outlet property="pickButton" destination="FrR-QM-OkF" id="1Ho-Ty-oid"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6X3-nl-vdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="36.431784107946029"/>
+            <point key="canvasLocation" x="-1.5" y="57.5"/>
         </scene>
     </scenes>
 </document>
