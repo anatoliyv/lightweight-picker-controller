@@ -206,7 +206,11 @@ public class LightweightPickerController: UIViewController {
         {
             let settingsAction = UIAlertAction(title: configuration.picker.settingsText, style: .default) { _ in
                 self.delegate?.lightweightPickerControllerDidCancel(self)
-                UIApplication.shared.openURL(settingsURL)
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(settingsURL)
+                }
             }
             alert.addAction(settingsAction)
         }
